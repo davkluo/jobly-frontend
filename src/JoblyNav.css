@@ -3,8 +3,17 @@
     color: white;
     margin-left: .75rem;
     border-color: rgb(150, 150, 150, .7);
+    width: fit-content;
+    align-self: center;
 }
 
-.btn.logoutBtn:hover {
-    text-decoration: underline;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.navbar-brand svg {
+    color: rgb(148, 225, 33);
 }
