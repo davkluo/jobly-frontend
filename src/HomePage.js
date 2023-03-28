@@ -4,7 +4,7 @@ import userContext from './userContext';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css';
 
-function HomePage() {
+function HomePage({ login }) {
   const { user } = useContext(userContext);
 
   return (
@@ -21,6 +21,14 @@ function HomePage() {
           <>
             <Button className='homePageButton' href='/login' variant='dark'>Login</Button>
             <Button className='homePageButton' href='/signup' variant='dark'>Sign Up</Button>
+
+            <Button
+              className='homePageButton'
+              onClick={() => login({username: 'guest', password: 'password'})}
+              variant='dark'
+            >
+              View As Guest
+            </Button>
           </>
         }
       </div>

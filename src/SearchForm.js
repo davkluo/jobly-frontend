@@ -49,7 +49,7 @@ function SearchForm({ search }) {
               value={ formData.searchTerm }
               aria-label="Search Term"
             />
-            <Button className='searchBtn'>Search</Button>
+            <Button type='submit' className='searchBtn'>Search</Button>
             </InputGroup>
           </Form>
         </Col>
