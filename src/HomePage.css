@@ -1,8 +1,7 @@
 .joblyHomeBanner {
-    background-color: rgba(25, 25, 25, .8);
     color: white;
-    width: 32.5rem;
-    padding: 1.75rem;
+    width: fit-content;
+    padding: 1.75rem 2.5rem 1.25rem;
     border-radius: 1rem;
     position:absolute;
     top: 45%;
@@ -42,6 +41,16 @@
     font-weight: bold;
     color: white;
     margin: 0;
+}
+
+button.guestLoginButton {
+    font-size: .9rem;
+    color: white;
+}
+
+button.guestLoginButton:hover {
+    color: rgb(148, 225, 33);
+    background-color: var(--bs-dark-rgb);
 }
 
 @keyframes float {

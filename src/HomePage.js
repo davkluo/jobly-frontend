@@ -14,17 +14,19 @@ function HomePage({ login }) {
           <h2>Welcome Back, {user.data.firstName}</h2>
         </div>
       }
-      <div className='joblyHomeBanner'>
+      <div className='joblyHomeBanner bg-dark'>
         <h1>Jobly</h1>
         <h2>All the jobs in one, convenient place.</h2>
         {!user.isLoggedIn &&
           <>
-            <Button className='homePageButton' href='/login' variant='dark'>Login</Button>
-            <Button className='homePageButton' href='/signup' variant='dark'>Sign Up</Button>
+            <div class='authButtonGroup mt-4 mb-1'>
+              <Button className='homePageButton' href='/login' variant='dark'>Login</Button>
+              <Button className='homePageButton' href='/signup' variant='dark'>Sign Up</Button>
+            </div>
 
             <Button
-              className='homePageButton'
-              onClick={() => login({username: 'guest', password: 'password'})}
+              className='guestLoginButton btn-link'
+              onClick={() => login({ username: 'guest', password: 'password' })}
               variant='dark'
             >
               View As Guest
