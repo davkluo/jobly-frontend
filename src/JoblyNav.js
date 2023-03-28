@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from 'react-router-dom';
 import { BriefcaseFill } from 'react-bootstrap-icons';
 import './JoblyNav.css';
 
@@ -31,15 +32,15 @@ function JoblyNav({ logout }) {
           <Nav className="ms-auto">
             {!user.isLoggedIn && (
               <>
-                <Nav.Link href="/login">Login</Nav.Link>
-                <Nav.Link href="/signup">Sign Up</Nav.Link>
+                <NavLink className="nav-link" to="/login">Login</NavLink>
+                <NavLink className="nav-link" to="/signup">Sign Up</NavLink>
               </>
             )}
             {user.isLoggedIn && (
               <>
-                <Nav.Link href="/companies">Companies</Nav.Link>
-                <Nav.Link href="/jobs">Jobs</Nav.Link>
-                <Nav.Link href="/profile">Profile</Nav.Link>
+                <NavLink className="nav-link" to="/companies">Companies</NavLink>
+                <NavLink className="nav-link" to="/jobs">Jobs</NavLink>
+                <NavLink className="nav-link" to="/profile">Profile</NavLink>
                 <Button
                   className='logoutBtn'
                   onClick={logout}
