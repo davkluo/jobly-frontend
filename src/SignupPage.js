@@ -1,5 +1,6 @@
 import React from 'react';
 import UserForm from './UserForm';
+import Col from 'react-bootstrap/Col';
 import "./SignupPage.css"
 
 /** User signup page
@@ -36,11 +37,17 @@ function SignupPage({ signup }) {
 
   return (
     <div>
-      <div className="SignupPage mx-auto mt-4 mb-2">
+      <Col
+        className="SignupPage d-flex flex-column mx-auto py-4 px-4 mt-4 mb-3 bg-dark"
+        xs={11}
+        sm={8}
+        md={6}
+        xl={4}
+      >
         <h1>Sign Up</h1>
         <hr/>
         <UserForm submit={signup} prompts={prompts} />
-      </div>
+      </Col>
     </div>
   );
 }

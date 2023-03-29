@@ -3,8 +3,8 @@
     padding: 1.75rem;
 }
 
-.UserFormButton {
-    box-shadow: 0 0 .1rem .1rem rgb(255, 255, 255, .5);
+.btn.UserFormButton {
     margin: .25rem;
-    background-color: rgba(10, 60, 40, .6) !important;
+    background-color: rgb(148, 225, 33);
+    border: none;
 }

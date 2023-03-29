@@ -79,7 +79,7 @@ function UserForm({ prompts, submit }) {
 
   return (
       <>
-        <Form className="UserForm" onSubmit={handleSubmit}>
+        <Form className="UserForm py-2 mb-2" onSubmit={handleSubmit}>
           {prompts.map((p, i) => (
             <Form.Group className='mb-3' key={i}>
               <Form.Label htmlFor={p.name}>{p.label}</Form.Label>
@@ -92,7 +92,13 @@ function UserForm({ prompts, submit }) {
               />
             </Form.Group>
           ))}
-          <Button className='UserFormButton' variant="success" type="submit">Submit</Button>
+          <Button
+            className='UserFormButton text-dark'
+            variant="light"
+            type="submit"
+          >
+            Submit
+          </Button>
         </Form>
         <MessageList messages={formData.messages} />
       </>

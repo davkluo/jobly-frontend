@@ -3,6 +3,7 @@ import MessageList from './MessageList';
 import userContext from './userContext';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
 import './ProfilePage.css';
 
 /** User profile page with edit form
@@ -56,11 +57,17 @@ function ProfilePage() {
 
   return (
 
-    <div className='ProfilePage mx-auto mt-4 mb-2'>
-      <h1>Profile</h1>
+    <Col
+      className='ProfilePage d-flex flex-column mx-auto py-4 px-4 mt-4 mb-3 bg-dark'
+      xs={11}
+      sm={8}
+      md={6}
+      xl={4}
+    >
+      <h1>User Profile</h1>
       <hr/>
 
-      <Form className='UserEditForm' onSubmit={handleSubmit}>
+      <Form className='UserEditForm py-2 mb-2' onSubmit={handleSubmit}>
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='usernameInput'>Username</Form.Label>
           <Form.Control
@@ -97,11 +104,17 @@ function ProfilePage() {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button className='UserEditFormButton' variant="success" type="submit">Edit User</Button>
+        <Button
+          className='UserEditFormButton text-dark'
+          variant="light"
+          type="submit"
+        >
+          Edit User
+        </Button>
       </Form>
 
       <MessageList messages={formData.messages} />
-    </div>
+    </Col>
 
   );
 }
