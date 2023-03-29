@@ -25,9 +25,12 @@
     font-size: 1.25rem;
 }
 
-.homePageButton {
-    box-shadow: 0 0 .1rem .1rem rgb(255, 255, 255, .5);
+.btn.homePageButton {
+    /* box-shadow: 0 0 .1rem .1rem rgb(255, 255, 255, .5); */
     margin: .25rem;
+    border-color: rgb(150, 150, 150, .7);
+    background-color: transparent;
+    color: white;
 }
 
 .welcomeMessage {

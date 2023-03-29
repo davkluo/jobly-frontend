@@ -7,6 +7,17 @@
 }
 
 .card.JobCard {
-    background-color: rgba(25, 25, 25, .8);
     color: white;
+    transition: all .1s ease-in-out;
+}
+
+.card.JobCard:hover {
+    box-shadow: 0 0 .75rem .1rem rgb(0, 0, 0, .35);
+    transform: scale(1.02);
+}
+
+.JobCard .card-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
 }

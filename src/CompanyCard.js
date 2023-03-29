@@ -7,7 +7,7 @@ import "./CompanyCard.css";
  *
  * Props:
  * - company: Object with information on company
- *    { handle, name, description, numEmployees, logoUrl }
+ *    { handle, name, description, numEmployees, logoUrl, jobs }
  *
  * CompanyList -> CompanyCard
  */
@@ -15,13 +15,30 @@ import "./CompanyCard.css";
 function CompanyCard({ company }) {
   return (
 
-    <Card className="CompanyCard mx-auto my-3">
-      <Link to={`${company.handle}`} style={{ textDecoration: 'none', color: 'black' }}>
+    <Card className="CompanyCard bg-dark mx-auto my-3">
+      <Link to={`${company.handle}`} style={{ textDecoration: 'none' }}>
         <Card.Body className="CardBody">
-          {company.logoUrl && <Card.Img className="mb-4" variant="top" src={company.logoUrl} alt={company.name} />}
+          {company.logoUrl
+            ? <Card.Img
+                className="mb-4"
+                variant="top"
+                src={company.logoUrl}
+                alt={`Company logo image for ${company.name}`}
+              />
+            : <Card.Img
+              className="mb-4"
+              variant="top"
+              src="/logos/logo1.png"
+              alt="Default company logo image"
+              />
+          }
           <Card.Title >{company.name}</Card.Title>
           <hr />
-          <Card.Text>{company.description}</Card.Text>
+          <Card.Text>
+            <small>
+              {company.description}
+            </small>
+          </Card.Text>
         </Card.Body>
       </Link>
     </Card>

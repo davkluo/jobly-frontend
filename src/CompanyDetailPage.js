@@ -3,6 +3,7 @@ import JobList from "./JobList";
 import { useParams } from "react-router-dom";
 import JoblyApi from "./helpers/api";
 import './CompanyDetailPage.css'
+import Col from 'react-bootstrap/Col';
 
 /** Detail page for a company
  *
@@ -48,10 +49,12 @@ function CompanyDetailPage() {
   return (
     <div className="CompanyDetailPage">
 
-      <div className='companyInfoHeading mx-auto'>
-        <h2>{company.data.name}</h2>
-        <p>{company.data.description}</p>
-      </div>
+      <Col xs={11} md={8} xl={6} className="mx-auto">
+        <div className='companyInfoHeading bg-dark py-4 px-4 mt-4 mb-3'>
+          <h2>{company.data.name}</h2>
+          <p>{company.data.description}</p>
+        </div>
+      </Col>
 
       <JobList jobs={company.data.jobs} />
     </div>

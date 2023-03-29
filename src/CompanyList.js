@@ -1,5 +1,8 @@
 import React from 'react';
 import CompanyCard from './CompanyCard';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 /** List of company cards
  *
@@ -13,12 +16,17 @@ import CompanyCard from './CompanyCard';
 function CompanyList({ companies }) {
   return (
     <div className='CompanyList'>
-      {companies.map(company =>
-        <CompanyCard
-          key={company.handle}
-          company={company}
-        />
-      )}
+      <Container>
+        <Row>
+          {companies.map(company =>
+            <Col xs={10} md={6} xl={4} key={company.handle} className="mx-auto d-flex">
+              <CompanyCard
+                company={company}
+              />
+            </Col>
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

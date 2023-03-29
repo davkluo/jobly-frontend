@@ -19,7 +19,7 @@ function JobList({ jobs }) {
       <Container>
         <Row>
             {jobs.map(job =>
-              <Col xs={10} md={6} xl={4} key={job.id} className='mx-auto'>
+              <Col xs={10} md={6} xl={4} key={job.id} className='mx-auto d-flex'>
                 <JobCard
                   job={job}
                 />

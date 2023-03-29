@@ -16,7 +16,7 @@ const DEFAULT_SEARCH_FORM_DATA = { searchTerm: '' };
  * { CompaniesPage, JobsPage } -> SearchForm
 */
 
-function SearchForm({ search }) {
+function SearchForm({ search, message="Enter Search Term..." }) {
   const [formData, setFormData] = useState(DEFAULT_SEARCH_FORM_DATA);
 
   /** Update form input. */
@@ -38,18 +38,25 @@ function SearchForm({ search }) {
   return (
     <Container>
       <Row>
-        <Col md={7} className="mx-auto">
-          <Form className="SearchForm my-3" onSubmit={handleSubmit}>
+        <Col lg={5} md={7} sm={8} xs={10} className="mx-auto">
+          <Form className="SearchForm mt-4 mb-3" onSubmit={handleSubmit}>
             <InputGroup className="mb-3">
             <Form.Control
               id="search"
               name="searchTerm"
-              placeholder="Enter Search Term..."
+              placeholder={message}
               onChange={ handleChange }
               value={ formData.searchTerm }
               aria-label="Search Term"
+              className='bg-dark'
             />
-            <Button type='submit' className='searchBtn'>Search</Button>
+            <Button
+              type='submit'
+              className='searchBtn text-dark'
+              variant='light'
+            >
+              Search
+            </Button>
             </InputGroup>
           </Form>
         </Col>

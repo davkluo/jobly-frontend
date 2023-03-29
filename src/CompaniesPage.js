@@ -43,7 +43,7 @@ function CompaniesPage() {
 
   return (
     <div className='CompaniesPage'>
-      <SearchForm search={fetchCompanies}/>
+      <SearchForm search={fetchCompanies} message="Search for a company"/>
       <CompanyList companies={companies.data} />
     </div>
   );

@@ -16,8 +16,8 @@ function HomePage({ login }) {
           {!user.isLoggedIn &&
             <>
               <div class='authButtonGroup mt-4 mb-1'>
-                <Button className='homePageButton' href='/login' variant='dark'>Login</Button>
-                <Button className='homePageButton' href='/signup' variant='dark'>Sign Up</Button>
+                <Button className='homePageButton' href='/login' variant='light'>Login</Button>
+                <Button className='homePageButton' href='/signup' variant='light'>Sign Up</Button>
               </div>
               <Button
                 className='guestLoginButton btn-link'

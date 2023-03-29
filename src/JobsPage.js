@@ -43,7 +43,7 @@ function JobsPage() {
 
   return (
     <div className='JobsPage'>
-      <SearchForm search={fetchJobs}/>
+      <SearchForm search={fetchJobs} message="Search for a job"/>
       <JobList jobs={jobs.data} />
     </div>
   );

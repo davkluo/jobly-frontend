@@ -1,8 +1,11 @@
 .companyInfoHeading {
-    background-color: rgba(25, 25, 25, .8);
     color: white;
-    width: 32.5rem;
-    margin: 1.25rem;
-    padding: .75rem;
+    width: fit-content;
+    /* margin: 1.25rem; */
+    /* padding: .75rem; */
     border-radius: 1rem;
+}
+
+.companyInfoHeading p {
+    margin: 0;
 }

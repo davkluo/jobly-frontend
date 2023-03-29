@@ -13,13 +13,13 @@ import './JobCard.css';
 
 function JobCard({ job }) {
   return (
-    <Card className="JobCard mx-auto my-3">
+    <Card className="JobCard bg-dark mx-auto my-3">
       <Card.Body>
         <Card.Title>{job.title}</Card.Title>
         <hr/>
-        <Card.Text>
+        {/* <Card.Text>
           {job.companyName}
-        </Card.Text>
+        </Card.Text> */}
         <Card.Text>
           <small>Salary: {job.salary}</small>
           <small>Equity: {job.equity}</small>

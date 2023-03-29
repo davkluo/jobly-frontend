@@ -23,7 +23,7 @@ function JoblyNav({ logout }) {
   return (
     <Navbar bg="dark" variant="dark" expand="md">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={NavLink} to="/">
           <BriefcaseFill />
           Jobly
         </Navbar.Brand>
@@ -32,15 +32,15 @@ function JoblyNav({ logout }) {
           <Nav className="ms-auto">
             {!user.isLoggedIn && (
               <>
-                <NavLink className="nav-link" to="/login">Login</NavLink>
-                <NavLink className="nav-link" to="/signup">Sign Up</NavLink>
+                <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+                <Nav.Link as={NavLink} to="/signup">Sign Up</Nav.Link>
               </>
             )}
             {user.isLoggedIn && (
               <>
-                <NavLink className="nav-link" to="/companies">Companies</NavLink>
-                <NavLink className="nav-link" to="/jobs">Jobs</NavLink>
-                <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                <Nav.Link as={NavLink} to="/companies">Companies</Nav.Link>
+                <Nav.Link as={NavLink} to="/jobs">Jobs</Nav.Link>
+                <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link>
                 <Button
                   className='logoutBtn'
                   onClick={logout}
