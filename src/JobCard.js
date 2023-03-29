@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { formatSalary, formatEquity } from './helpers/formatting';
 import './JobCard.css';
 
 /** Card with job information
@@ -21,8 +22,8 @@ function JobCard({ job }) {
           {job.companyName}
         </Card.Text> */}
         <Card.Text>
-          <small>Salary: {job.salary}</small>
-          <small>Equity: {job.equity}</small>
+          <small>Salary: {formatSalary(job.salary)}</small>
+          <small>Equity: {formatEquity(job.equity)}</small>
         </Card.Text>
       </Card.Body>
     </Card>
