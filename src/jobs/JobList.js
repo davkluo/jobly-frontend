@@ -9,11 +9,13 @@ import Col from 'react-bootstrap/Col';
  * Props:
  * - jobs: Array of job objects
  *    { id, title, salary, equity, companyHandle, companyName }
+ * - showTooltip: boolean to display tooltip
+ * - enableLink: boolean to enable link to company page
  *
- * JobsPage -> JobList -> JobCard
+ * JobsPage, CompanyDetailPage -> JobList -> JobCard
  */
 
-function JobList({ jobs }) {
+function JobList({ jobs, showTooltip, enableLink }) {
   return (
     <div className='JobList'>
       <Container>
@@ -22,6 +24,8 @@ function JobList({ jobs }) {
               <Col xs={10} md={6} xl={4} key={job.id} className='mx-auto d-flex'>
                 <JobCard
                   job={job}
+                  showTooltip={showTooltip}
+                  enableLink={enableLink}
                 />
               </Col>
             )}

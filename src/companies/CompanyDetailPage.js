@@ -49,14 +49,14 @@ function CompanyDetailPage() {
   return (
     <div className="CompanyDetailPage">
 
-      <Col xs={11} md={8} xl={6} className="mx-auto">
+      <Col xs={11} md={8} xl={6} className="mx-auto d-flex justify-content-center">
         <div className='companyInfoHeading bg-dark py-4 px-4 mt-4 mb-3'>
           <h2>{company.data.name}</h2>
           <p>{company.data.description}</p>
         </div>
       </Col>
 
-      <JobList jobs={company.data.jobs} />
+      <JobList jobs={company.data.jobs} showTooltip={false} enableLink={false} />
     </div>
   );
 }

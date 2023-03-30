@@ -11,7 +11,9 @@ const DEFAULT_SEARCH_FORM_DATA = { searchTerm: '' };
 
 /** Search Form
  *
- * - Props: search - function to search Jobs or Companies
+ * Props:
+ * - search - function to search Jobs or Companies
+ * - message - message to display in search input
  *
  * { CompaniesPage, JobsPage } -> SearchForm
 */

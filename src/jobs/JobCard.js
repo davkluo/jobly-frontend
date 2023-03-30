@@ -12,13 +12,15 @@ import './JobCard.css';
 /** Card with job information
  *
  * Props:
- * -job: Object with job information
+ * - job: Object with job information
  *    { id, title, salary, equity, companyName }
+ * - showTooltip: boolean to display tooltip
+ * - enableLink: boolean to enable link to company page
  *
  * JobList -> JobCard
  */
 
-function JobCard({ job }) {
+function JobCard({ job, showTooltip, enableLink }) {
   const { hasAppliedToJob, applyToJob } = useContext(userContext);
   const hasApplied = hasAppliedToJob(job.id);
 
@@ -27,12 +29,18 @@ function JobCard({ job }) {
       <OverlayTrigger
         placement="bottom"
         overlay={
-          <Tooltip>
-            Go to company page.
-          </Tooltip>
+          showTooltip ?
+          <Tooltip>Go to company page.</Tooltip> :
+          <></>
         }
       >
-        <Link to={`/companies/${job.companyHandle}`} style={{ textDecoration: 'none' }}>
+        <Link
+          to={`/companies/${job.companyHandle}`}
+          style={{
+            textDecoration: 'none',
+            pointerEvents: enableLink ? '' : 'none',
+          }}
+        >
           <Card.Body>
             <Card.Title>{job.title}</Card.Title>
             <hr />
@@ -41,7 +49,10 @@ function JobCard({ job }) {
               <small>Equity: {formatEquity(job.equity)}</small>
               <Button
                 className="applyButton btn-link"
-                onClick={() => applyToJob(job.id)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  applyToJob(job.id);
+                }}
                 disabled={hasApplied}
               >
                 {hasApplied ? "Applied!" : "Apply"}

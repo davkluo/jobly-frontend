@@ -45,7 +45,7 @@ function JobsPage() {
   return (
     <div className='JobsPage'>
       <SearchForm search={fetchJobs} message="Search for a job"/>
-      <JobList jobs={jobs.data} />
+      <JobList jobs={jobs.data} showTooltip={true} enableLink={true}/>
     </div>
   );
 }
