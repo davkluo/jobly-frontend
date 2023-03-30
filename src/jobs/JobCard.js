@@ -35,10 +35,9 @@ function JobCard({ job, showTooltip, enableLink }) {
         }
       >
         <Link
-          to={`/companies/${job.companyHandle}`}
+          to={enableLink ? `/companies/${job.companyHandle}` : ''}
           style={{
             textDecoration: 'none',
-            pointerEvents: enableLink ? '' : 'none',
           }}
         >
           <Card.Body>
