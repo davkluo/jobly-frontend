@@ -1,13 +1,13 @@
 import "./App.css";
-import JoblyNav from "./JoblyNav";
-import RoutesList from "./RoutesList";
-import Loader from './Loader';
+import JoblyNav from "./nav/JoblyNav";
+import RoutesList from "./nav/RoutesList";
+import Loader from './common/Loader';
 import { BrowserRouter } from "react-router-dom";
 import JoblyApi from "./helpers/api";
 import { useEffect, useState } from "react";
 import decode from "jwt-decode";
 
-import userContext from "./userContext";
+import userContext from "./auth/userContext";
 
 const DEFAULT_USER_STATE = {
   data: null,

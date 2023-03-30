@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import userContext from './userContext';
-// import { Link } from 'react-router-dom';
+import userContext from '../auth/userContext';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css';
 

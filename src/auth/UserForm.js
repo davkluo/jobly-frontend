@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MessageList from "./MessageList";
+import MessageList from "../common/MessageList";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "./UserForm.css";

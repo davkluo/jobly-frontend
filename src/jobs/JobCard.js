@@ -5,8 +5,8 @@ import Button from "react-bootstrap/Button";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import { Link } from 'react-router-dom';
-import userContext from './userContext';
-import { formatSalary, formatEquity } from './helpers/formatting';
+import userContext from '../auth/userContext';
+import { formatSalary, formatEquity } from '../helpers/formatting';
 import './JobCard.css';
 
 /** Card with job information

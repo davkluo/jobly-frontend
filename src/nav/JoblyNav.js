@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import { NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -8,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { BriefcaseFill } from 'react-bootstrap-icons';
 import './JoblyNav.css';
 
-import userContext from "./userContext";
+import userContext from "../auth/userContext";
 
 /** Renders JoblyNav Bar Component
  *

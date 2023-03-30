@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import SearchForm from './SearchForm';
+import SearchForm from '../common/SearchForm';
 import CompanyList from './CompanyList';
-import JoblyApi from './helpers/api';
-import Loader from './Loader';
+import JoblyApi from '../helpers/api';
+import Loader from '../common/Loader';
 
 /** All companies page
  *

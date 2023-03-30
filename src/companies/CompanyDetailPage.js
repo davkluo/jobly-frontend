@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import JobList from "./JobList";
+import JobList from "../jobs/JobList";
 import { useParams } from "react-router-dom";
-import JoblyApi from "./helpers/api";
+import JoblyApi from "../helpers/api";
 import './CompanyDetailPage.css'
 import Col from 'react-bootstrap/Col';
 

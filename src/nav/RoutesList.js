@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './HomePage';
-import CompaniesPage from './CompaniesPage';
-import JobsPage from './JobsPage';
-import LoginPage from './LoginPage';
-import SignupPage from './SignupPage';
-import ProfilePage from './ProfilePage';
-import CompanyDetailPage from './CompanyDetailPage';
+import HomePage from '../homepage/HomePage';
+import CompaniesPage from '../companies/CompaniesPage';
+import JobsPage from '../jobs/JobsPage';
+import LoginPage from '../auth/LoginPage';
+import SignupPage from '../auth/SignupPage';
+import ProfilePage from '../profile/ProfilePage';
+import CompanyDetailPage from '../companies/CompanyDetailPage';
 
-import userContext from './userContext';
+import userContext from '../auth/userContext';
 
 /** App Routes
  *

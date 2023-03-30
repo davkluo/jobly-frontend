@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import MessageList from './MessageList';
-import userContext from './userContext';
+import MessageList from '../common/MessageList';
+import userContext from '../auth/userContext';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
