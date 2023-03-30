@@ -22,7 +22,6 @@ function HomePage({ login }) {
               <Button
                 className='guestLoginButton btn-link'
                 onClick={() => login({ username: 'guest', password: 'password' })}
-                variant='dark'
               >
                 View As Guest
               </Button>

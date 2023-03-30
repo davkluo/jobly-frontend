@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchForm from './SearchForm';
 import JobList from './JobList';
 import JoblyApi from './helpers/api';
+import Loader from './Loader';
 
 /** All jobs page
  *
@@ -38,7 +39,7 @@ function JobsPage() {
     });
   }
 
-  if (jobs.isLoading) return <i>Loading...</i>;
+  if (jobs.isLoading) return <Loader />;
   if (jobs.data === null) return <i>Error retrieving Jobs...</i>
 
   return (

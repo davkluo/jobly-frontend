@@ -7,7 +7,6 @@
 }
 
 .card.JobCard {
-    color: white;
     transition: all .1s ease-in-out;
 }
 
@@ -20,4 +19,28 @@
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
+}
+
+.card.JobCard .card-title,
+.card.JobCard .card-text,
+.card.JobCard hr {
+    color: white;
+}
+
+.btn.applyButton {
+    font-size: .9rem;
+    color: rgb(148, 225, 33);
+    text-decoration: none;
+}
+
+.btn.applyButton:hover {
+    color: rgb(148, 225, 33);
+    background-color: var(--bs-dark-rgb);
+    text-decoration: underline;
+}
+
+.btn.applyButton:disabled {
+    color: rgb(123, 186, 27);
+    text-decoration: none;
+    background-color: var(--bs-dark-rgb);
 }

@@ -1,6 +1,7 @@
 import "./App.css";
 import JoblyNav from "./JoblyNav";
 import RoutesList from "./RoutesList";
+import Loader from './Loader';
 import { BrowserRouter } from "react-router-dom";
 import JoblyApi from "./helpers/api";
 import { useEffect, useState } from "react";
@@ -31,6 +32,7 @@ const LOCALSTORAGE_TOKEN_KEY = "jobly-token";
 function App() {
   const [user, setUser] = useState(DEFAULT_USER_STATE);
   const [token, setToken] = useState();
+  const [appliedJobIds, setAppliedJobIds] = useState(new Set());
 
   // Attempt to login previous user from localstorage
   useEffect(function checkForTokenOnMount() {
@@ -51,6 +53,7 @@ function App() {
 
         // There is no token
         if (token === null) {
+          setAppliedJobIds(new Set());
           setUser({
             data: null,
             isLoggedIn: false,
@@ -69,6 +72,7 @@ function App() {
         } catch (err) {
           console.error(err);
         }
+        setAppliedJobIds(new Set(userFromAPI.jobs));
         setUser({
           data: userFromAPI,
           isLoggedIn: true,
@@ -133,13 +137,28 @@ function App() {
     }));
   }
 
+  /** Check if user has applied to job */
+  function hasAppliedToJob(id) {
+    return appliedJobIds.has(id);
+  }
+
+  /** Apply currently logged-in user to job by job id */
+  async function applyToJob(id) {
+    if (appliedJobIds.has(id)) return;
+
+    await JoblyApi.applyToJob(user.data.username, id);
+    setAppliedJobIds(prevAppliedJobIds => new Set([...prevAppliedJobIds, id]));
+  }
+
   if (user.hasLoaded === false) {
-    return <h2>Loading...</h2>
+    return <Loader />;
   }
 
   return (
     <div className="App">
-      <userContext.Provider value={{ user, saveUserEdit }}>
+      <userContext.Provider
+        value={{ user, saveUserEdit, hasAppliedToJob, applyToJob }}
+      >
         <BrowserRouter>
           <JoblyNav logout={logout} />
           <RoutesList signup={signup} login={login} />

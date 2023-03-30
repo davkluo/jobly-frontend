@@ -14,7 +14,6 @@ import "./CompanyCard.css";
 
 function CompanyCard({ company }) {
   return (
-
     <Card className="CompanyCard bg-dark mx-auto my-3">
       <Link to={`${company.handle}`} style={{ textDecoration: 'none' }}>
         <Card.Body className="CardBody">

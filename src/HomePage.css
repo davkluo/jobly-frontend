@@ -49,13 +49,13 @@
     margin: 0;
 }
 
-button.guestLoginButton {
+.btn.guestLoginButton {
     font-size: .9rem;
     color: rgb(148, 225, 33);
     text-decoration: none;
 }
 
-button.guestLoginButton:hover {
+.btn.guestLoginButton:hover {
     color: rgb(148, 225, 33);
     background-color: var(--bs-dark-rgb);
     text-decoration: underline;

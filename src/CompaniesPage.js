@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchForm from './SearchForm';
 import CompanyList from './CompanyList';
 import JoblyApi from './helpers/api';
+import Loader from './Loader';
 
 /** All companies page
  *
@@ -38,7 +39,7 @@ function CompaniesPage() {
     });
   }
 
-  if (companies.isLoading) return <i>Loading...</i>;
+  if (companies.isLoading) return <Loader />;
   if (companies.data === null) return <i>Error retrieving companies.</i>
 
   return (
