@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Jobly Frontend
+Job board clone allowing users to make an account, view job postings, and apply for jobs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The accompanying backend can be found [here](https://github.com/davkluo/express-jobly).
 
-## Available Scripts
+[Live Demo Link](http://davids-jobly.surge.sh)
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Motivation](#motivation)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Running the App](#running-the-app)
+- [Viewing the App](#viewing-the-app)
+- [Future Improvements](#future-improvements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Motivation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Create a full-stack, single-page application with authentication/authorization
+- Mimic a job board site where users can view companies and jobs, as well as apply for jobs
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Built with React and Bootstrap
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="1431" alt="Screen Shot 2023-04-05 at 12 09 21 PM" src="https://user-images.githubusercontent.com/108588437/230181378-ae56a249-609d-45e5-8632-913f7520b320.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1435" alt="Screen Shot 2023-04-05 at 12 09 35 PM" src="https://user-images.githubusercontent.com/108588437/230181407-d5687fca-0922-41ac-9422-6bc1ee6c6bfa.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1432" alt="Screen Shot 2023-04-05 at 12 10 19 PM" src="https://user-images.githubusercontent.com/108588437/230181436-0a5dbbb1-8127-4681-9cae-3eda01f86329.png">
 
-### `npm run eject`
+<img width="1430" alt="Screen Shot 2023-04-05 at 12 10 40 PM" src="https://user-images.githubusercontent.com/108588437/230181492-c4aede19-b310-4e34-b61d-512c087ca795.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="1431" alt="Screen Shot 2023-04-05 at 12 11 03 PM" src="https://user-images.githubusercontent.com/108588437/230181567-74ffc79a-aff9-4696-a736-0fa6a14283c1.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1431" alt="Screen Shot 2023-04-05 at 12 11 13 PM" src="https://user-images.githubusercontent.com/108588437/230181682-f2d0342d-7b22-40ff-9fe0-d61c6097261d.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Clone the repo
 
-## Learn More
+```bash
+git clone git@github.com:davkluo/jobly-frontend.git
+cd jobly-frontend
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You will need `node` and `npm` installed globally on your machine.
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Set environment variables
 
-### Analyzing the Bundle Size
+```bash
+cp .env.example .env
+# open .env and modify the environment variables
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The default REACT_APP_BASE_URL is the live link to my deployed backend. If you are running the backend locally use "http://localhost:3001".
 
-### Making a Progressive Web App
+## Running the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm start
+```
 
-### Advanced Configuration
+## Viewing the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Visit `http://localhost:3000` to view the app
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+- Write tests
+- Allow users to cancel applications
+- Scrape data from real job postings
