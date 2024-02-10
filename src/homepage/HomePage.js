@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import userContext from '../auth/userContext';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 function HomePage({ login }) {
@@ -15,8 +16,16 @@ function HomePage({ login }) {
           {!user.isLoggedIn &&
             <>
               <div className='authButtonGroup mt-4 mb-1'>
-                <Button className='homePageButton' href='/login' variant='light'>Login</Button>
-                <Button className='homePageButton' href='/signup' variant='light'>Sign Up</Button>
+                <Link to='/login' style={{ textDecoration: 'none' }}>
+                  <Button className='homePageButton' variant='light'>
+                    Login
+                  </Button>
+                </Link>
+                <Link to='/signup' style={{ textDecoration: 'none' }}>
+                  <Button className='homePageButton' href='/signup' variant='light'>
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
               <Button
                 className='guestLoginButton btn-link'
