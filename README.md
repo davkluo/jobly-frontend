@@ -1,9 +1,10 @@
 # Jobly Frontend
+
 Job board clone allowing users to make an account, view job postings, and apply for jobs.
 
 The accompanying backend can be found [here](https://github.com/davkluo/express-jobly).
 
-[Live Demo Link](http://davids-jobly.surge.sh)
+[Live Demo Link](https://davids-jobly.netlify.app)
 
 ## Table of Contents
 
@@ -75,6 +76,7 @@ npm start
 Visit `http://localhost:3000` to view the app
 
 ## Future Improvements
+
 - Write tests
 - Allow users to cancel applications
 - Scrape data from real job postings
